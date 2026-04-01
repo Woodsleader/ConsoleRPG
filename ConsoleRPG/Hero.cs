@@ -59,6 +59,9 @@ namespace ConsoleRPG
         public void AddGold(int gold) => Gold += gold;
 
         public void RemoveGold(int gold) => Gold -= gold;
-
+        public void SetName()
+        {
+            Name = Game.AskHeroName();
+        }
     }
 }
