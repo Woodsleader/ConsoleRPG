@@ -6,9 +6,9 @@ namespace ConsoleRPG
 {
     internal class Game
     {
+        private static Hero player = new Hero();
         public static void GameRunning()
         {
-            var Player = new Hero();
             AskHeroName();
             bool isRunning = true;
             while (isRunning)
@@ -23,6 +23,7 @@ namespace ConsoleRPG
             switch (UserChoice(1, 4))
             {
                 case 1:
+                    CharacterMenu();
                     break;
                 case 2:
                     break;
@@ -39,6 +40,7 @@ namespace ConsoleRPG
             switch (UserChoice(1, 5))
             {
                 case 1:
+
                     break;
                 case 2:
                     break;
@@ -83,5 +85,8 @@ namespace ConsoleRPG
             string inputClean = char.ToUpper(inputTrimmed[0]) + inputTrimmed.Substring(1).ToLowerInvariant();
             return inputClean;
         }
+
+        //Check equippable items
+        private static bool
     }
 }

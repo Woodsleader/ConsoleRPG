@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleRPG
 {
-    internal class Armor : Item
+    internal class Armor : Item, IEquippable
     {
         public int Defense { get; set; }
         public int Dodge { get; set; }
